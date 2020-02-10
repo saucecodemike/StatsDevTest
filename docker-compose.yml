@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  webserver:
+    build:
+      context: ./.docker/bin/webserver
+    container_name: 'statsnz-webserver'
+    restart: 'always'
+    ports:
+      - "81:80"
+      - "443:443"
+    links:
+      - mysql
+    volumes:
+      - .:/var/www/html
+      - ${LOG_DIR-./.docker//logs/apache2}:/var/log/apache2
+  mysql:
+    build: ./.docker/bin/mysql
+    container_name: 'statsnz-mysql'
+    restart: 'always'
+    ports:
+      - "3308:3306"
+    volumes:
+      - ${MYSQL_DATA_DIR-./data/mysql}:/var/lib/mysql
+      - ${MYSQL_LOG_DIR-./logs/mysql}:/var/log/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: tiger
+      MYSQL_DATABASE: png
+      MYSQL_USER: png
+      MYSQL_PASSWORD: png
+
+
