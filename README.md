@@ -1,7 +1,13 @@
 # StatsDevTest
 ###Developer test for stats new zealand
 
-##Setup Instructions
+# Setup instructions for silverstripe
+
+ *Create a new page of type Graph Page.
+ *On the left hand side, click graph management and import the CSV
+
+# Setup Instructions for local environment
+ 
 
 *Clone Down the repo
 
@@ -31,10 +37,11 @@ These will be for the .env (we should really commit these, just trying to make s
 
 *Notes about docker:
 
+Logs will appear in the .docker logs folder which should help with any issues
+
 *docker ps to get current containers
 
-*if you have permissions errors, it can be caused by differant unix systems, run "docker exec -it statsnz-webserver " , then change the ownership of the html folder with "chown -R www-data:root html/"
-
+*if you have permissions errors, it can be caused by differant unix systems, run "docker exec -it statsnz-webserver " , then change the ownership of the assets / htaccess folder/files with "chown -R www-data:root html/" or any other files, to make sure they have right permisons.
 
 *To make this faster for the reviewers to setup, i have left the docker-compose.yml pre-configured.
 
