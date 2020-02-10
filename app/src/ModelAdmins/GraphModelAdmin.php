@@ -5,6 +5,7 @@ namespace StatsTest\ModelAdmins;
 
 use SilverStripe\Admin\ModelAdmin;
 use StatsTest\DataObjects\CustomGraphRow;
+use StatsTest\Extensions\GraphCsvBulkLoader;
 
 /**
  * Class GraphModelAdmin
@@ -33,5 +34,12 @@ class GraphModelAdmin extends ModelAdmin
      * @var string
      */
     private static $menu_title = 'Graph Management';
+
+    /**
+     * @var array 
+     */
+    private static $model_importers = [
+        CustomGraphRow::class => GraphCsvBulkLoader::class,
+    ];
 
 }
