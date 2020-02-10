@@ -11,7 +11,7 @@ class CustomGraphRow extends DataObject
 {
 
     /**
-     * @var string 
+     * @var string
      */
     private static $table_name = 'CustomGraphRow';
 
