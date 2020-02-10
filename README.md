@@ -17,11 +17,9 @@
 
 * Make sure you are in the root of the project and run "docker-compose up -d --build" , this will build the docker images.
 
-* The images are running on port 81, just to avoid conflicts.
+* The images are running on port 81, just to avoid conflicts ( http://localhost:81/ )
 
-http://localhost:81/
-
-These will be for the .env (we should really commit these, just trying to make setup easier)
+These will be for the .env (we shouldnt really commit these, just trying to make setup easier for the reviewer)
 
 # DB credentials
 * SS_DATABASE_CLASS="MySQLDatabase"
