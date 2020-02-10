@@ -3,21 +3,21 @@
 
 # Setup instructions for silverstripe
 
- *Create a new page of type Graph Page.
- *On the left hand side, click graph management and import the CSV
+ * Create a new page of type Graph Page.
+ * On the left hand side, click graph management and import the CSV
 
 # Setup Instructions for local environment
  
 
-*Clone Down the repo
+* Clone Down the repo
 
-*CD into the freshly cloned repo
+* CD into the freshly cloned repo
 
-*Run a composer install
+* Run a composer install
 
-*Make sure you are in the root of the project and run "docker-compose up -d --build" , this will build the docker images.
+* Make sure you are in the root of the project and run "docker-compose up -d --build" , this will build the docker images.
 
-*The images are running on port 81, just to avoid conflicts.
+* The images are running on port 81, just to avoid conflicts.
 
 http://localhost:81/
 
