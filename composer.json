@@ -1,7 +1,13 @@
 {
     "name": "silverstripe/installer",
     "type": "silverstripe-recipe",
-    "description": "The SilverStripe Framework Installer",
+    "description": "Stats NZ Test",
+    "authors": [
+        {
+            "name": "Michael Andrzejewski",
+            "email": "overlandmike@gmail.com"
+        }
+    ],
     "require": {
         "php": ">=7.1.0",
         "silverstripe/recipe-plugin": "^1.2",
