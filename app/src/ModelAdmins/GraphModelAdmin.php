@@ -36,7 +36,7 @@ class GraphModelAdmin extends ModelAdmin
     private static $menu_title = 'Graph Management';
 
     /**
-     * @var array 
+     * @var array
      */
     private static $model_importers = [
         CustomGraphRow::class => GraphCsvBulkLoader::class,
