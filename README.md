@@ -18,19 +18,23 @@ http://localhost:81/
 These will be for the .env (we should really commit these, just trying to make setup easier)
 
 # DB credentials
-SS_DATABASE_CLASS="MySQLDatabase"
-SS_DATABASE_SERVER="mysql"
-SS_DATABASE_USERNAME="root"
-SS_DATABASE_PASSWORD="tiger"
-SS_DATABASE_NAME="png"
+* SS_DATABASE_CLASS="MySQLDatabase"
+* SS_DATABASE_SERVER="mysql"
+* SS_DATABASE_USERNAME="root"
+* SS_DATABASE_PASSWORD="tiger"
+* SS_DATABASE_NAME="png"
 
-SS_DEFAULT_ADMIN_USERNAME="admin"
-SS_DEFAULT_ADMIN_PASSWORD="password"
+* SS_DEFAULT_ADMIN_USERNAME="admin"
+* SS_DEFAULT_ADMIN_PASSWORD="password"
 
 *After composer has run create a file called .env and copy the contents of the .env.example
 
-
 *Notes about docker:
+
+*docker ps to get current containers
+
+*if you have permissions errors, it can be caused by differant unix systems, run "docker exec -it statsnz-webserver " , then change the ownership of the html folder with "chown -R www-data:root html/"
+
 
 *To make this faster for the reviewers to setup, i have left the docker-compose.yml pre-configured.
 
